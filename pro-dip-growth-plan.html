@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pro Dip Growth Plan</title>
+<meta name="description" content="Website launch, monthly plans and add-ons for Pro Dip LLC, prepared by DTE Solutions LLC.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Pro Dip Growth Plan">
+<meta property="og:description" content="Website launch, monthly plans and add-ons for Pro Dip LLC — prepared by DTE Solutions LLC.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Exo+2:wght@300;400;500;600&display=swap">
+<style>
+/* Layout: a single-column spec sheet in Pro Dip's own "obsidian + signal red" look; tiers laid side by side like film grades on a shop wall. Deliberately dark-only to match the client's site. */
+:root{
+  --bg:#07070a;
+  --panel:#0f0f14;
+  --panel-2:#15151c;
+  --line:#26262f;
+  --line-red:rgba(255,26,60,.35);
+  --fg:#f2f2f5;
+  --muted:#a4a7b2;
+  --dim:#6d7080;
+  --red:#ff1a3c;
+  --red-soft:rgba(255,26,60,.12);
+  --good:#3ddc97;
+  --display:'Rajdhani','Arial Narrow',Arial,sans-serif;
+  --body:'Exo 2','Segoe UI',system-ui,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.6;margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:20px;padding-block:0 64px}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.05;margin:0;text-wrap:balance;letter-spacing:.01em}
+h2{font-size:clamp(28px,4vw,40px);text-transform:uppercase}
+h3{font-size:22px;text-transform:uppercase}
+p{margin:0}
+.eyebrow{font-family:var(--display);font-weight:600;font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--red)}
+.lede{color:var(--muted);max-width:64ch}
+section{padding-block:56px 0;display:grid;gap:24px}
+.sec-head{display:grid;gap:10px}
+.num{font-variant-numeric:tabular-nums}
+
+/* header */
+header{border-bottom:1px solid var(--line);padding-block:28px;position:relative;overflow:hidden}
+header::after{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(255,255,255,.018) 0 1px,transparent 1px 3px)}
+.head-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px}
+.logo{width:220px;height:auto;display:block}
+.meta{font-size:13px;color:var(--muted);text-align:right;display:grid;gap:2px}
+.meta b{color:var(--fg);font-weight:500}
+.hero{padding-block:48px 8px;display:grid;gap:18px}
+.hero h1{font-size:clamp(40px,7vw,76px);text-transform:uppercase}
+.hero h1 span{color:var(--red)}
+.proof{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.chip{font-family:var(--display);font-weight:600;font-size:15px;letter-spacing:.06em;border:1px solid var(--line);padding:6px 12px;border-radius:2px;color:var(--fg);background:var(--panel)}
+.chip em{font-style:normal;color:var(--red)}
+
+/* launch */
+.launch{display:grid;grid-template-columns:1.1fr 1fr;gap:20px}
+@media (max-width:820px){.launch{grid-template-columns:1fr}}
+.box{background:var(--panel);border:1px solid var(--line);padding:24px;display:grid;gap:14px;align-content:start;min-width:0}
+.box h3{font-size:18px;letter-spacing:.06em}
+ul.checks{list-style:none;padding:0;margin:0;display:grid;gap:9px;align-content:start}
+ul.checks li{display:grid;grid-template-columns:18px 1fr;gap:10px;font-size:15px;color:var(--fg)}
+ul.checks li::before{content:"";width:10px;height:10px;margin-top:7px;border:2px solid var(--red);transform:rotate(45deg)}
+ul.checks.done li::before{background:var(--red)}
+ul.checks li small{display:block;color:var(--muted);font-size:13px;line-height:1.45}
+.price-box{border-color:var(--line-red);background:linear-gradient(180deg,var(--red-soft),transparent 70%),var(--panel)}
+.big{font-family:var(--display);font-weight:700;font-size:56px;line-height:1}
+.big sub{font-size:18px;color:var(--muted);vertical-align:baseline;font-weight:600;margin-left:4px}
+.strike{color:var(--dim);text-decoration:line-through;font-size:15px}
+.deal{border-top:1px dashed var(--line-red);padding-top:14px;font-size:15px;color:var(--muted)}
+.deal b{color:var(--fg)}
+
+/* tiers */
+.tiers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:stretch}
+@media (max-width:900px){.tiers{grid-template-columns:1fr}}
+.tier{background:var(--panel);border:1px solid var(--line);padding:26px 22px;display:grid;grid-template-rows:auto auto auto 1fr;gap:16px;position:relative}
+.tier.pick{border-color:var(--red);box-shadow:0 0 0 1px var(--red),0 18px 50px -20px rgba(255,26,60,.45)}
+.flag{position:absolute;top:-12px;left:22px;background:var(--red);color:#fff;font-family:var(--display);font-weight:700;font-size:12px;letter-spacing:.18em;padding:3px 10px;text-transform:uppercase}
+.grade{font-family:var(--display);font-weight:600;font-size:13px;letter-spacing:.2em;color:var(--dim);text-transform:uppercase}
+.tier h3{font-size:28px}
+.tier .for{color:var(--muted);font-size:14px;line-height:1.5}
+.tier .big{font-size:48px}
+.tier .inc{font-size:13px;color:var(--red);font-family:var(--display);letter-spacing:.12em;text-transform:uppercase;font-weight:600}
+
+/* table */
+.scroll{overflow-x:auto;border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:14px}
+th,td{padding:11px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+thead th{font-family:var(--display);text-transform:uppercase;letter-spacing:.1em;font-size:14px;background:var(--panel-2);color:var(--fg)}
+thead th:not(:first-child),td:not(:first-child){text-align:center;width:16%}
+tbody tr:nth-child(even) td{background:rgba(255,255,255,.015)}
+td.y{color:var(--red);font-weight:600}
+td.n{color:var(--dim)}
+tr.grp td{font-family:var(--display);text-transform:uppercase;letter-spacing:.14em;font-size:12px;color:var(--red);background:var(--bg)!important;padding-top:16px}
+
+/* add-ons */
+.addons{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.addon{background:var(--panel);border:1px solid var(--line);padding:20px;display:grid;gap:8px;align-content:start}
+.addon.sig{border-color:var(--line-red);grid-column:1/-1;grid-template-columns:1fr auto;align-items:start;gap:8px 24px}
+@media (max-width:640px){.addon.sig{grid-template-columns:1fr}}
+.addon h4{margin:0;font-family:var(--display);font-size:19px;text-transform:uppercase;letter-spacing:.04em}
+.addon .p{font-family:var(--display);font-weight:700;font-size:22px;color:var(--fg);white-space:nowrap}
+.addon .p small{font-size:14px;color:var(--muted);font-weight:600}
+.addon p{color:var(--muted);font-size:14px}
+.tag{justify-self:start;font-family:var(--display);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--red);border:1px solid var(--line-red);padding:2px 8px}
+
+/* market */
+.market{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.m{background:var(--panel);padding:18px 20px;display:grid;gap:4px}
+.m .l{font-size:13px;color:var(--muted)}
+.m .v{font-family:var(--display);font-weight:700;font-size:26px}
+.m.us{grid-column:1/-1;background:linear-gradient(180deg,var(--red-soft),transparent),var(--panel)}
+.m.us .v{color:var(--red)}
+
+/* roi */
+.roi{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media (max-width:820px){.roi{grid-template-columns:1fr}}
+.field{display:grid;gap:6px}
+.field label{font-family:var(--display);font-weight:600;text-transform:uppercase;letter-spacing:.12em;font-size:13px;color:var(--muted)}
+.field .row{display:flex;align-items:center;gap:12px}
+input[type=range]{flex:1;accent-color:var(--red);min-width:0}
+.field output{font-family:var(--display);font-weight:700;font-size:22px;min-width:78px;text-align:right}
+.seg{display:flex;flex-wrap:wrap;gap:6px}
+.seg button{flex:1;min-width:110px;font-family:var(--display);font-weight:600;font-size:15px;letter-spacing:.05em;background:var(--panel-2);border:1px solid var(--line);color:var(--muted);padding:9px 10px;cursor:pointer}
+.seg button[aria-pressed=true]{border-color:var(--red);color:var(--fg);background:var(--red-soft)}
+.seg button:focus-visible,input:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+.out{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+.out div{background:var(--panel);padding:16px 18px;display:grid;gap:2px}
+.out .l{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.12em;font-family:var(--display);font-weight:600}
+.out .v{font-family:var(--display);font-weight:700;font-size:30px}
+.out .v.pos{color:var(--good)}
+.out .wide{grid-column:1/-1}
+.note{font-size:13px;color:var(--dim)}
+
+/* rules + steps */
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+.rule{border-left:2px solid var(--red);padding:4px 0 4px 16px;display:grid;gap:4px}
+.rule b{font-family:var(--display);font-size:18px;text-transform:uppercase;letter-spacing:.04em}
+.rule span{color:var(--muted);font-size:14px}
+ol.steps{list-style:none;counter-reset:s;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+ol.steps li{counter-increment:s;background:var(--panel);border:1px solid var(--line);padding:20px;display:grid;gap:6px;font-size:14px;color:var(--muted)}
+ol.steps li::before{content:counter(s);font-family:var(--display);font-weight:700;font-size:34px;line-height:1;color:var(--red)}
+ol.steps li b{color:var(--fg);font-size:16px;display:block;margin-bottom:4px}
+footer{margin-top:64px;padding-top:20px;border-top:1px solid var(--line);display:grid;gap:10px;font-size:12px;color:var(--dim)}
+footer a{color:var(--muted)}
+@media (prefers-reduced-motion:no-preference){.seg button,.tier{transition:border-color .2s,background .2s,box-shadow .2s}}
+</style>
+<style>img{max-width:100%}[hidden]{display:none!important}html{-webkit-text-size-adjust:100%}</style>
+</head>
+<body>
+<header>
+  <div class="wrap" style="padding-block:0">
+    <div class="head-row">
+      <img class="logo" alt="Pro Dip — Window Tint and Paint Protection Films" src="data:image/jpeg;base64,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">
+      <div class="meta">
+        <span>Prepared for <b>Ahmed Fayed · Pro Dip LLC</b></span>
+        <span>By <b>Drew Ernst · DTE Solutions LLC</b></span>
+        <span>September 2026 · Quincy, IL</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <div class="eyebrow">Website + Local Growth Plan</div>
+    <h1>You earned the reputation.<br>Now make every search <span>find it.</span></h1>
+    <p class="lede">The new site is built. This plan covers what it takes to put it live, and three monthly options for turning Pro Dip's Google presence and reviews into more booked tint, wrap and PPF jobs across the Tri-States.</p>
+    <div class="proof">
+      <span class="chip"><em>4.9★</em> on Google</span>
+      <span class="chip"><em>111+</em> reviews</span>
+      <span class="chip">Best of Quincy <em>2025 &amp; 2026</em></span>
+    </div>
+  </div>
+
+  <!-- LAUNCH -->
+  <section id="launch">
+    <div class="sec-head">
+      <div class="eyebrow">Step 1 · One-time</div>
+      <h2>Site launch</h2>
+      <p class="lede">Most of the work is already done. Launch covers finishing the pieces that need real Pro Dip info and putting the site live on prodipqcy.com.</p>
+    </div>
+    <div class="launch">
+      <div class="box">
+        <h3>Already built</h3>
+        <ul class="checks done">
+          <li><span>Custom-coded site, no templates <small>Loads fast on phones, where most tint customers search</small></span></li>
+          <li><span>Drag-to-compare before &amp; after sliders <small>Car, truck, motorcycle and ATV</small></span></li>
+          <li><span>Services, reviews and portfolio gallery layout</span></li>
+          <li><span>Google business data built into the code <small>Tells Google the address, hours, phone and services</small></span></li>
+          <li><span>"Leave a Google review" button and quote form</span></li>
+        </ul>
+        <h3 style="margin-top:8px">Finished at launch</h3>
+        <ul class="checks">
+          <li><span>Real job photos in the gallery and sliders <small>Up to 30 photos from Ahmed's phone, cropped and optimized</small></span></li>
+          <li><span>Review button linked to Pro Dip's actual Google listing</span></li>
+          <li><span>Quote form that lands every time <small>Sends to Ahmed's email and texts his phone, even if the customer has no email app set up</small></span></li>
+          <li><span>Live on prodipqcy.com with SSL</span></li>
+          <li><span>Google Search Console + visitor and call tracking</span></li>
+          <li><span>One round of revisions and a walkthrough</span></li>
+        </ul>
+      </div>
+      <div class="box price-box">
+        <div class="eyebrow">Launch fee · Friends rate</div>
+        <div class="big num">$1,200</div>
+        <div class="strike">Standard rate $2,800</div>
+        <p style="color:var(--muted);font-size:15px">Paid 50% to start, 50% at go-live. Live within about a week of receiving photos.</p>
+        <div class="deal"><b>$600 launch</b> with a 6-month commitment to Local Leader or Tri-State Takeover. Half off, because the monthly work keeps paying off the site.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIERS -->
+  <section id="plans">
+    <div class="sec-head">
+      <div class="eyebrow">Step 2 · Monthly</div>
+      <h2>Pick your coverage</h2>
+      <p class="lede">Each plan includes everything in the one before it. Start anywhere and move up or down any month.</p>
+    </div>
+    <div class="tiers">
+      <article class="tier">
+        <div class="grade">Keep it running</div>
+        <div style="display:grid;gap:8px"><h3>Pit Crew</h3><p class="for">The site stays fast, secure and up to date. Nothing breaks, nothing gets missed.</p></div>
+        <div class="big num">$59<sub>/mo</sub></div>
+        <ul class="checks">
+          <li><span>Hosting, SSL and domain kept healthy</span></li>
+          <li><span>Weekly backups and uptime monitoring</span></li>
+          <li><span>Quote form tested every month</span></li>
+          <li><span>Up to 1 hour of updates a month <small>Prices, promos, new photos, holiday hours</small></span></li>
+          <li><span>Changes done within 2 business days</span></li>
+        </ul>
+      </article>
+
+      <article class="tier pick">
+        <span class="flag">Recommended</span>
+        <div class="grade">Own the map</div>
+        <div style="display:grid;gap:8px"><h3>Local Leader</h3><p class="for">Pro Dip shows up first in Quincy's Google map results and the review count keeps climbing.</p></div>
+        <div class="big num">$249<sub>/mo</sub></div>
+        <div style="display:grid;gap:10px;align-content:start">
+          <div class="inc">Everything in Pit Crew, plus</div>
+          <ul class="checks">
+            <li><span>Google Business Profile fully optimized <small>Categories, every service with starting prices, photos, products, Q&amp;A</small></span></li>
+            <li><span>Weekly Google post using real job photos</span></li>
+            <li><span>Review engine <small>Request link texted after every job, plus a counter QR sign and tap cards</small></span></li>
+            <li><span>Every Google review answered within 48 hours</span></li>
+            <li><span>Listings cleanup <small>Same name, address and phone on Apple Maps, Bing, Yelp, Facebook, BBB, Nextdoor and more</small></span></li>
+            <li><span>Monthly one-page report <small>Calls, direction requests, quote leads, new reviews, map rank for 10 searches</small></span></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="tier">
+        <div class="grade">Grow past Quincy</div>
+        <div style="display:grid;gap:8px"><h3>Tri-State Takeover</h3><p class="for">Pull in customers from Hannibal, Palmyra, Macomb and Keokuk, not just Quincy.</p></div>
+        <div class="big num">$449<sub>/mo</sub></div>
+        <div style="display:grid;gap:10px;align-content:start">
+          <div class="inc">Everything in Local Leader, plus</div>
+          <ul class="checks">
+            <li><span>2 new town and service pages a month <small>"Ceramic tint Hannibal MO", "truck wraps Macomb IL" and so on</small></span></li>
+            <li><span>Illinois vs. Missouri tint law guide <small>Answers the most common phone question and ranks for it</small></span></li>
+            <li><span>Map rank tracking across the whole Tri-State area</span></li>
+            <li><span>Monthly portfolio refresh <small>Ahmed texts photos; they go to the site, Google, and 8 Instagram/Facebook posts</small></span></li>
+            <li><span>Online booking with deposit to cut no-shows</span></li>
+            <li><span>2 hours of site updates a month</span></li>
+            <li><span>Quarterly sit-down to review numbers and plan</span></li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- COMPARE -->
+  <section id="compare">
+    <div class="sec-head">
+      <div class="eyebrow">Side by side</div>
+      <h2>What each plan covers</h2>
+    </div>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Included</th><th>Pit Crew<br><span class="num" style="color:var(--muted)">$59</span></th><th style="color:var(--red)">Local Leader<br><span class="num">$249</span></th><th>Tri-State<br><span class="num" style="color:var(--muted)">$449</span></th></tr></thead>
+        <tbody>
+          <tr class="grp"><td colspan="4">Website</td></tr>
+          <tr><td>Hosting, SSL, backups, monitoring</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+          <tr><td>Monthly site updates</td><td>1 hr</td><td>1 hr</td><td>2 hrs</td></tr>
+          <tr><td>New town and service pages</td><td class="n">—</td><td class="n">—</td><td>2 / month</td></tr>
+          <tr><td>Online booking with deposit</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td></tr>
+          <tr class="grp"><td colspan="4">Google</td></tr>
+          <tr><td>Business Profile optimization</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td></tr>
+          <tr><td>Google posts</td><td class="n">—</td><td>Weekly</td><td>Weekly</td></tr>
+          <tr><td>Listings cleanup across directories</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td></tr>
+          <tr><td>Map rank tracking</td><td class="n">—</td><td>10 Quincy searches</td><td>Full Tri-State grid</td></tr>
+          <tr class="grp"><td colspan="4">Reviews</td></tr>
+          <tr><td>After-job review request texts</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td></tr>
+          <tr><td>Counter QR sign + tap cards</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td></tr>
+          <tr><td>Replies to every review</td><td class="n">—</td><td>Within 48 hrs</td><td>Within 48 hrs</td></tr>
+          <tr class="grp"><td colspan="4">Content &amp; reporting</td></tr>
+          <tr><td>Instagram / Facebook posts from job photos</td><td class="n">—</td><td class="n">—</td><td>8 / month</td></tr>
+          <tr><td>Monthly report</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td></tr>
+          <tr><td>Quarterly strategy sit-down</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ADD-ONS -->
+  <section id="addons">
+    <div class="sec-head">
+      <div class="eyebrow">Optional</div>
+      <h2>Add-ons</h2>
+      <p class="lede">Add to any plan, any time.</p>
+    </div>
+    <div class="addons">
+      <div class="addon sig">
+        <div style="display:grid;gap:8px">
+          <span class="tag">Signature</span>
+          <h4>AI Wrap Visualizer</h4>
+          <p>A customer uploads a photo of their own car or truck, picks a color and finish (matte black, satin gray, gloss red, chrome delete) and sees a preview on their vehicle. The preview and their photo go straight to Ahmed as a quote request. It turns "I'm thinking about a wrap" into a lead with the vehicle already in hand.</p>
+        </div>
+        <div class="p num">$1,500 <small>setup</small><br>+ $25 <small>/mo</small></div>
+      </div>
+      <div class="addon"><h4>Google Ads</h4><div class="p num">$300 <small>setup</small> + $175 <small>/mo</small></div><p>Search ads for "window tint near me" and "car wrap" in a set radius. Ad budget is paid by Ahmed directly to Google.</p></div>
+      <div class="addon"><h4>Shop photo &amp; video day</h4><div class="p num">$350</div><p>Half a day at the shop. 20 edited photos plus 3 short vertical reels of installs for Google, the site and social.</p></div>
+      <div class="addon"><h4>Digital warranty cards</h4><div class="p num">$300</div><p>Customers get their film warranty by text with a lookup page. Looks professional and brings them back for referrals.</p></div>
+      <div class="addon"><h4>Fleet &amp; commercial page</h4><div class="p num">$400</div><p>A page and quote form aimed at local businesses lettering or wrapping work trucks and vans.</p></div>
+      <div class="addon"><h4>Extra town or service page</h4><div class="p num">$150 <small>each</small></div><p>For Pit Crew or Local Leader, or beyond the 2 a month in Tri-State Takeover.</p></div>
+      <div class="addon"><h4>Review counter kit</h4><div class="p num">$95</div><p>QR counter sign and 50 tap cards. Included free in Local Leader and above.</p></div>
+    </div>
+  </section>
+
+  <!-- MARKET -->
+  <section id="market">
+    <div class="sec-head">
+      <div class="eyebrow">For comparison</div>
+      <h2>What this costs piece by piece</h2>
+      <p class="lede">Typical 2026 prices when a shop buys these services separately from agencies and software companies.</p>
+    </div>
+    <div class="market">
+      <div class="m"><span class="l">Google Business Profile management (agency)</span><span class="v num">$125–$400/mo</span></div>
+      <div class="m"><span class="l">Review request software (NiceJob)</span><span class="v num">$75–$125/mo</span></div>
+      <div class="m"><span class="l">Review + messaging platform (Birdeye)</span><span class="v num">$299–$449/mo</span></div>
+      <div class="m"><span class="l">Review + messaging platform (Podium, real cost)</span><span class="v num">$450–$600/mo</span></div>
+      <div class="m us"><span class="l">Local Leader: site care + Google profile + reviews, one local contact</span><span class="v num">$249/mo</span></div>
+    </div>
+  </section>
+
+  <!-- ROI -->
+  <section id="roi">
+    <div class="sec-head">
+      <div class="eyebrow">Run the numbers</div>
+      <h2>What it takes to pay for itself</h2>
+      <p class="lede">Move the sliders to Pro Dip's real numbers. The starting values are examples only.</p>
+    </div>
+    <div class="roi">
+      <div class="box" style="gap:22px">
+        <div class="field">
+          <label for="avg">Average job value</label>
+          <div class="row"><input id="avg" type="range" min="150" max="3000" step="25" value="400"><output id="avgOut" class="num">$400</output></div>
+          <span class="note">Blend of tint, PPF and wrap tickets</span>
+        </div>
+        <div class="field">
+          <label for="jobs">Extra jobs per month from Google</label>
+          <div class="row"><input id="jobs" type="range" min="0" max="15" step="1" value="2"><output id="jobsOut" class="num">2</output></div>
+        </div>
+        <div class="field">
+          <label id="planLbl">Plan</label>
+          <div class="seg" role="group" aria-labelledby="planLbl">
+            <button type="button" data-cost="59" aria-pressed="false">Pit Crew</button>
+            <button type="button" data-cost="249" aria-pressed="true">Local Leader</button>
+            <button type="button" data-cost="449" aria-pressed="false">Tri-State</button>
+          </div>
+        </div>
+      </div>
+      <div style="display:grid;gap:12px;align-content:start">
+        <div class="out">
+          <div><span class="l">Extra revenue / mo</span><span class="v num" id="rev">$800</span></div>
+          <div><span class="l">Plan cost / mo</span><span class="v num" id="cost">$249</span></div>
+          <div class="wide"><span class="l">Left over after the plan / mo</span><span class="v num pos" id="net">$551</span></div>
+          <div class="wide"><span class="l">Jobs needed to cover the plan</span><span class="v num" id="be">1 job a month</span></div>
+        </div>
+        <p class="note">Revenue, not profit. Film and materials still come out of each job. No one can promise a set number of new jobs; the monthly report shows what actually came in.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RULES -->
+  <section id="terms">
+    <div class="sec-head">
+      <div class="eyebrow">Ground rules</div>
+      <h2>How we work together</h2>
+    </div>
+    <div class="rules">
+      <div class="rule"><b>Ahmed owns everything</b><span>Domain, Google profile, photos, content and site code are Pro Dip's. If you ever leave, you get all files and access within 7 days.</span></div>
+      <div class="rule"><b>Real reviews only</b><span>Every customer gets asked. No filtering out unhappy customers and no bought reviews. Google removes those and can suspend the listing.</span></div>
+      <div class="rule"><b>No fake promises</b><span>Nobody can guarantee a #1 spot on Google. You get real numbers every month instead.</span></div>
+      <div class="rule"><b>Short commitment</b><span>3-month minimum on monthly plans, then month to month with 30 days' notice. Switch plans any month.</span></div>
+      <div class="rule"><b>Simple billing</b><span>Invoiced on the 1st. Ad budgets and any third-party costs are paid by Pro Dip directly.</span></div>
+      <div class="rule"><b>One local contact</b><span>Drew answers the phone. No ticket queue, no call center.</span></div>
+    </div>
+  </section>
+
+  <!-- NEXT -->
+  <section id="next">
+    <div class="sec-head">
+      <div class="eyebrow">Getting started</div>
+      <h2>Next steps</h2>
+    </div>
+    <ol class="steps">
+      <li><span><b>Pick a plan</b>Choose a monthly plan and any add-ons. Launch fee is set by the plan.</span></li>
+      <li><span><b>Send photos and access</b>20–30 job photos, plus manager access to the Google Business Profile.</span></li>
+      <li><span><b>Go live</b>Site launches on prodipqcy.com about a week after photos arrive.</span></li>
+      <li><span><b>First report</b>30 days after launch: calls, leads, reviews and map rank, side by side with today.</span></li>
+    </ol>
+  </section>
+
+  <footer>
+    <span>DTE Solutions LLC · Quincy, IL · Prices valid through December 31, 2026.</span>
+    <span>Market prices from <a href="https://www.merchynt.com/post/google-my-business-management-pricing" target="_blank" rel="noopener">Merchynt, GBP Management Pricing 2026</a> and <a href="https://thevalleymarketinggroup.com/blog/podium-vs-birdeye-vs-nicejob-review-management-2026/" target="_blank" rel="noopener">Valley Marketing Group, Podium vs Birdeye vs NiceJob (2026)</a>.</span>
+  </footer>
+</main>
+
+<script>
+(function(){
+  const avg=document.getElementById('avg'), jobs=document.getElementById('jobs');
+  const btns=[...document.querySelectorAll('.seg button')];
+  let cost=249;
+  const $=n=>'$'+Math.round(n).toLocaleString('en-US');
+  function calc(){
+    const a=+avg.value, j=+jobs.value, rev=a*j, net=rev-cost, be=Math.ceil(cost/a);
+    document.getElementById('avgOut').textContent=$(a);
+    document.getElementById('jobsOut').textContent=j;
+    document.getElementById('rev').textContent=$(rev);
+    document.getElementById('cost').textContent=$(cost);
+    const n=document.getElementById('net');
+    n.textContent=(net<0?'−':'')+$(Math.abs(net));
+    n.classList.toggle('pos',net>=0);
+    document.getElementById('be').textContent=be+(be===1?' job':' jobs')+' a month';
+  }
+  btns.forEach(b=>b.addEventListener('click',()=>{btns.forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');cost=+b.dataset.cost;calc();}));
+  avg.addEventListener('input',calc); jobs.addEventListener('input',calc); calc();
+})();
+</script>
+</body>
+</html>
